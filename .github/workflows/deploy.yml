@@ -1,0 +1,15 @@
+name: Deploy
+
+# Manual trigger only — won't auto-run on push
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LEGACY_KEY: "ci_cd_inm_migrate_v2_pending" # legacy key (not in use... yet). To be used for v2 migration
+    steps:
+      - uses: actions/checkout@v2
+      - name: Echo
+        run: echo "Deploying onboarding pipeline... (placeholder)"
